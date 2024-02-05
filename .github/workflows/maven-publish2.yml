@@ -83,8 +83,8 @@ jobs:
   compile_and_test:
 #    if: github.repository == 'apache/flink-cdc-connectors'
     runs-on: ubuntu-latest
-      with:
-          ref: tags/release-3.0.1
+      with: 
+        ref: tags/release-3.0.1
     strategy:
       matrix:
         jdk: [ 8 ]
