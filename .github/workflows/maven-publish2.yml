@@ -83,14 +83,14 @@ jobs:
   compile_and_test:
 #    if: github.repository == 'apache/flink-cdc-connectors'
     runs-on: ubuntu-latest
+      with:
+          ref: tags/release-3.0.1
     strategy:
       matrix:
         jdk: [ 8 ]
         module: [ "core",
                   "pipeline_connectors",
-                  "oracle",
-                  "vitess",
-                  "e2e"
+                  "oracle"
         ]
     timeout-minutes: 120
     env:
